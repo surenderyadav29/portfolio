@@ -286,3 +286,115 @@ footer{
 
 }
 
+
+
+/* Project action buttons */
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+.project-card p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 12px;
+}
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.view-details-btn {
+    color: #fff;
+    background: #0d6efd;
+}
+.github-btn {
+    color: #fff;
+    background: #252a31;
+}
+.project-btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+.project-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    padding: 20px;
+    background: rgba(0,0,0,.75);
+    align-items: center;
+    justify-content: center;
+}
+.project-modal.is-open { display: flex; }
+.project-modal-content {
+    position: relative;
+    width: min(560px, 100%);
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 18px;
+    background: #0f172a;
+    color: #fff;
+    box-shadow: 0 20px 60px rgba(0,0,0,.45);
+}
+.project-modal-content h3 { margin: 0 35px 16px 0; }
+.project-modal-content p { line-height: 1.8; color: #cbd5e1; }
+.project-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 30px;
+}
+@media(max-width:576px) {
+    .project-actions .project-btn { flex: 1 1 auto; }
+}
+
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1050;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 13px 19px;
+    border-radius: 999px;
+    background: #25D366;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,.35);
+    transition: transform .2s ease, background .2s ease;
+}
+.whatsapp-float i { font-size: 25px; line-height: 1; }
+.whatsapp-float:hover {
+    color: #fff;
+    background: #1ebe5d;
+    transform: translateY(-4px);
+}
+@media (max-width: 576px) {
+    .whatsapp-float { right: 15px; bottom: 15px; padding: 12px 15px; }
+    .whatsapp-float span { font-size: 14px; }
+}
